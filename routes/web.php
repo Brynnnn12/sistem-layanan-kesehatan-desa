@@ -7,6 +7,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
@@ -15,5 +18,10 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 });
+
+Route::get('/jadwal-kegiatan', App\Livewire\Jadwal\JadwalKegiatan::class)->name('jadwal.kegiatan');
+
+
+//jad
 
 require __DIR__ . '/auth.php';
