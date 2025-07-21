@@ -17,6 +17,9 @@ class Logout
         Session::invalidate();
         Session::regenerateToken();
 
+        // Set pesan sukses logout
+        Session::flash('status', 'Logout berhasil!');
+
         return redirect('/');
     }
 }

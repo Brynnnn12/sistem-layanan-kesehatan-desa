@@ -40,6 +40,11 @@ new #[Layout('components.layouts.auth')] class extends Component {
         RateLimiter::clear($this->throttleKey());
         Session::regenerate();
 
+        // Set pesan sukses login
+        session()->flash('status', 'Login berhasil!');
+        // Pastikan flash message tetap setelah redirect
+        session()->keep(['status']);
+
         //redirect ke home /
         $this->redirect('/', navigate: true);
     }
@@ -75,6 +80,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
 }; ?>
 
 <div class="flex flex-col gap-6">
+
     <x-auth-header :title="__('Log in to your account')" :description="__('Enter your email and password below to log in')" />
 
     <!-- Session Status -->
@@ -98,7 +104,11 @@ new #[Layout('components.layouts.auth')] class extends Component {
         </div>
 
         <!-- Remember Me -->
-        <flux:checkbox wire:model="remember" :label="__('Remember me')" />
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+            <input type="checkbox" wire:model="remember" name="remember" id="remember"
+                class="form-checkbox h-4 w-4 text-blue-600 transition duration-150 ease-in-out">
+            <span>{{ __('Remember me') }}</span>
+        </label>
 
         <div class="flex items-center justify-end">
             <flux:button variant="primary" type="submit" class="w-full">{{ __('Log in') }}</flux:button>

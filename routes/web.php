@@ -7,9 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
@@ -20,7 +17,9 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/jadwal-kegiatan', App\Livewire\Jadwal\JadwalKegiatan::class)->name('jadwal.kegiatan');
-
+Route::get('/riwayat-pemeriksaan', App\Livewire\Riwayat\RiwayatPemeriksaan::class)->name('riwayat.pemeriksaan');
+Route::get('/about', App\Livewire\About\About::class)->name('about');
+Route::get('/faq', App\Livewire\Faq\Faq::class)->name('faq');
 
 //jad
 

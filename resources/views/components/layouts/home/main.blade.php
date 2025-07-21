@@ -39,6 +39,10 @@
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 min-h-screen">
+
+    <x-page-loader />
+
+    <x-sweet-alert />
     <!-- Header with Navigation -->
     <x-partials.home.header />
 

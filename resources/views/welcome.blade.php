@@ -6,11 +6,11 @@
             <p class="text-xl mb-6">Memberikan layanan kesehatan terbaik untuk masyarakat desa dengan pelayanan yang
                 ramah dan profesional.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="/jadwal-kegiatan"
+                <a wire:navigate href="/jadwal-kegiatan"
                     class="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg scroll-smooth">
                     Lihat Jadwal <i class="fas fa-calendar-alt ml-2"></i>
                 </a>
-                <a href="#contact"
+                <a wire:navigate href="#contact"
                     class="px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition duration-300 shadow-md hover:shadow-lg scroll-smooth">
                     Hubungi Kami <i class="fas fa-phone-alt ml-2"></i>
                 </a>
@@ -65,8 +65,8 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/2">
-                    <img src="/images/klinik-desa.jpg" alt="Klinik Desa"
-                        class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="https://fikes.esaunggul.ac.id/wp-content/uploads/2022/07/kesehatan-masyarakat.webp"
+                        alt="Klinik Desa" class="rounded-lg shadow-lg w-full h-auto object-cover">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Tentang Kami</h2>
@@ -79,7 +79,7 @@
                         Tim kami terdiri dari dokter umum, bidan, dan perawat terlatih yang siap memberikan pelayanan
                         terbaik dengan peralatan medis yang memadai.
                     </p>
-                    <a href="/about"
+                    <a wire:navigate href="/about"
                         class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 inline-flex items-center">
                         Selengkapnya <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -90,74 +90,25 @@
 
     <!-- Schedule Section -->
     <section id="schedule" class="mb-16">
-        <div class="max-w-6xl mx-auto px-4">
+        <div class="max-w-4xl mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Jadwal Pelayanan</h2>
-                <a href="#schedule"
-                    class="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium mt-4 md:mt-0 inline-flex items-center scroll-smooth">
-                    Lihat Jadwal Lengkap <i class="fas fa-arrow-right ml-2"></i>
-                </a>
+                <h2 class="text-3xl font-bold text-gray-800 dark:text-white">Jam Operasional</h2>
             </div>
 
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
-                <div
-                    class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-gray-700">
-                    <!-- Weekday Schedule -->
-                    <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition duration-200">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                            <i class="fas fa-calendar-day text-blue-500 mr-3"></i> Senin - Jumat
-                        </h3>
-                        <div class="space-y-3">
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="far fa-clock mr-3 text-blue-500"></i> 08:00 - 14:00 WIB
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="fas fa-user-md mr-3 text-blue-500"></i> Dr. Andi Pratama
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="fas fa-procedures mr-3 text-blue-500"></i> Layanan Umum & Imunisasi
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Saturday Schedule -->
-                    <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition duration-200">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                            <i class="fas fa-calendar-alt text-blue-500 mr-3"></i> Sabtu
-                        </h3>
-                        <div class="space-y-3">
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="far fa-clock mr-3 text-blue-500"></i> 08:00 - 12:00 WIB
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="fas fa-user-md mr-3 text-blue-500"></i> Dr. Siti Rahayu
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="fas fa-baby mr-3 text-blue-500"></i> Khusus Ibu & Anak
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Sunday Schedule -->
-                    <div class="p-6 hover:bg-gray-50 dark:hover:bg-gray-700 transition duration-200">
-                        <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex items-center">
-                            <i class="fas fa-calendar-check text-blue-500 mr-3"></i> Minggu
-                        </h3>
-                        <div class="space-y-3">
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="far fa-clock mr-3 text-blue-500"></i> 09:00 - 12:00 WIB
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="fas fa-user-nurse mr-3 text-blue-500"></i> Bidan Ratna
-                            </p>
-                            <p class="text-gray-600 dark:text-gray-300 flex items-center">
-                                <i class="fas fa-heartbeat mr-3 text-blue-500"></i> Pemeriksaan Rutin
-                            </p>
-                        </div>
-                    </div>
+                <div class="p-6 text-center">
+                    <h3
+                        class="text-xl font-semibold text-gray-800 dark:text-white mb-4 flex justify-center items-center">
+                        <i class="far fa-clock text-blue-500 mr-3"></i> Jam Buka Umum
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 text-lg">
+                        Setiap Hari | <span class="font-medium">08:00 - 14:00 WIB</span>
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        Jadwal pelayanan dapat berubah sewaktu-waktu tanpa pemberitahuan.
+                    </p>
                 </div>
 
-                <!-- Emergency Info -->
                 <div class="bg-blue-50 dark:bg-blue-900/30 p-4 border-t border-blue-200 dark:border-blue-800">
                     <div class="flex items-center">
                         <div class="bg-red-100 dark:bg-red-900/30 p-3 rounded-full mr-4">
@@ -165,7 +116,8 @@
                         </div>
                         <div>
                             <h4 class="font-semibold text-gray-800 dark:text-white">Pelayanan Gawat Darurat</h4>
-                            <p class="text-gray-600 dark:text-gray-300 text-sm">Untuk keadaan darurat, hubungi 24 jam:
+                            <p class="text-gray-600 dark:text-gray-300 text-sm">
+                                Untuk keadaan darurat, hubungi 24 jam:
                                 <span class="font-bold">0812-3456-7890</span>
                             </p>
                         </div>
@@ -175,6 +127,7 @@
         </div>
     </section>
 
+
     <!-- CTA Section -->
     <section id="contact"
         class="bg-gradient-to-r from-blue-500 to-teal-500 text-white rounded-xl p-8 mb-12 shadow-lg">
@@ -183,11 +136,11 @@
             <p class="text-xl mb-6">Tim kami siap membantu Anda dengan segala pertanyaan mengenai layanan kesehatan
                 kami.</p>
             <div class="flex flex-wrap justify-center gap-4">
-                <a href="#contact"
+                <a wire:navigate href="#contact"
                     class="px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md hover:shadow-lg scroll-smooth">
                     Hubungi Kami <i class="fas fa-envelope ml-2"></i>
                 </a>
-                <a href="/faq"
+                <a wire:navigate href="/faq"
                     class="px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition duration-300 shadow-md hover:shadow-lg">
                     FAQ <i class="fas fa-question-circle ml-2"></i>
                 </a>

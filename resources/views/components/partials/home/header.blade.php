@@ -42,17 +42,18 @@
                         class="hidden md:inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
                         Dashboard
                     </a>
+                    <form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <button type="submit"
+                            class="w-full text-center px-4 py-2 text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 transition duration-300">
+                            Keluar
+                        </button>
+                    </form>
                 @else
                     <a href="{{ route('login') }}"
                         class="hidden md:inline-block px-4 py-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition duration-300">
                         Masuk
                     </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                            class="hidden md:inline-block px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
-                            Daftar
-                        </a>
-                    @endif
                 @endauth
 
                 <!-- Mobile menu button -->
@@ -92,17 +93,18 @@
                         class="w-full text-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
                         Dashboard
                     </a>
+                    <form method="POST" action="{{ route('logout') }}" class="w-full">
+                        @csrf
+                        <button type="submit"
+                            class="w-full text-center px-4 py-2 text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 transition duration-300">
+                            Keluar
+                        </button>
+                    </form>
                 @else
                     <a href="{{ route('login') }}"
                         class="w-full text-center px-4 py-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 transition duration-300">
                         Masuk
                     </a>
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}"
-                            class="w-full text-center px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">
-                            Daftar
-                        </a>
-                    @endif
                 @endauth
             </div>
         </div>
